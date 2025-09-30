@@ -1,0 +1,41 @@
+Q1. Consider a binary tree of N nodes (1 Root and N−1 descendants). Each node X is
+related to the root node by a relation such as L, R, LL, LR, ... and so on, where:
+- L  : X is the left child of Root (R).
+- R  : X is the right child of Root.
+- LL : X is the left child of the left child of Root.
+- LR : X is the right child of the left child of Root.
+… and so on by extending with L/R.
+
+Write a program to find the sum of all magic parents in the tree.
+
+Definition:
+Magic parents are those nodes whose one child is a factor of the other child.
+Nodes having only one child can never be Magic parents.
+
+Constraints:
+3 ≤ N ≤ 100
+
+Input format:
+- The first line contains an integer N, the number of nodes in the tree.
+- The second line contains an integer Root, which is the value of the root node.
+- The next N−1 lines each contain a string S and an integer X separated by a space,
+  where S is the relation between Root and X (e.g., L, R, LL, LR, …), and X is the
+  node value at that position.
+
+Output format:
+- Print a single integer: the sum of all magic parent node values.
+
+Sample Input
+6
+11
+L 14
+R 28
+LL 7
+LR 8
+RR 14
+
+Sample Output
+11
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
