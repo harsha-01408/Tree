@@ -39,3 +39,58 @@ Sample Output
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Question: Minimize Operations on a Path (Weighted Tree)
+
+You are given a weighted tree with N nodes and N−1 edges.
+In one operation you may choose any edge and either increase its weight by 1
+or decrease its weight by 1.
+
+There are Q queries. Each query gives two nodes U and V.
+For each query, determine the minimum number of operations required to make
+the weights of ALL edges on the unique path from U to V equal.
+If U = V, the answer is 0.
+
+Input Format
+- The first line contains a single integer N.
+- The next N−1 lines each contain three space-separated integers:
+  U V W, denoting an edge between nodes U and V with weight W.
+- The next line contains a single integer Q.
+- The next Q lines each contain two space-separated integers U V
+  describing a query path.
+
+Output Format
+- Print Q space-separated integers, where the i-th integer is the answer
+  to the i-th query.
+
+Constraints
+- 1 ≤ N ≤ 1e5
+- 1 ≤ U, V ≤ N
+- 1 ≤ W ≤ 26
+- 1 ≤ Q ≤ 1e5
+
+Sample Input
+7
+1 2 3
+1 3 4
+2 4 4
+2 5 6
+3 6 6
+3 7 8
+3
+2 7
+4 6
+4 7
+
+Sample Output
+5 3 5
+
+Explanation (sketch)
+For each query, the minimum number of operations equals the minimum over all
+targets t of sum over edges e on the path of |w_e − t|.
+This minimum is attained when t is a median of the path’s edge weights.
+For (2,7), making all edges equal requires 5 operations; for (4,6) it is 3;
+for (4,7) it is 5.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
