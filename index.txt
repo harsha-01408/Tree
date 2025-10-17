@@ -169,3 +169,68 @@ Possible splits:
 The minimum possible difference is 10.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Balanced Substrings
+
+Given a string, you need to find the total number of **balanced substrings**. 
+A substring is said to be **balanced** if it contains an **equal number of unique vowels** and **unique consonants**.
+
+A vowel is one of the characters: **'a', 'e', 'i', 'o', 'u'**. 
+All other lowercase characters are consonants.
+
+Write a function that returns the total number of **balanced substrings** in the string.
+
+Function Signature:
+----------------------
+long long countBalanced(string &s);
+
+Input:
+-------
+- A string S consisting of lowercase English letters. The length of the string is denoted by N.
+
+Output:
+--------
+- A single integer, the total number of **balanced substrings** in the string S.
+
+Constraints:
+------------
+- 1 ≤ N ≤ 10^5 (The length of the string can be large, so the solution should be efficient)
+- The string only contains lowercase English letters (a-z).
+
+Example 1:
+-------------
+Input: "eef"
+Output: 2
+Explanation:  
+Substrings:
+- "e" → vowels = {e} (1), consonants = {} (0) → ❌ not balanced
+- "ee" → vowels = {e} (1), consonants = {} (0) → ❌ not balanced
+- "eef" → vowels = {e} (1), consonants = {f} (1) → ✅ balanced
+- "e" → vowels = {e} (1), consonants = {} (0) → ❌ not balanced
+- "ef" → vowels = {e} (1), consonants = {f} (1) → ✅ balanced
+- "f" → vowels = {} (0), consonants = {f} (1) → ❌ not balanced
+
+Total balanced substrings = 2
+
+Example 2:
+-------------
+Input: "ada"
+Output: 3
+Explanation:
+Substrings:
+- "a" → vowels = {a} (1), consonants = {} (0) → ❌ not balanced
+- "ad" → vowels = {a} (1), consonants = {d} (1) → ✅ balanced
+- "ada" → vowels = {a} (1), consonants = {d} (1) → ✅ balanced
+- "d" → vowels = {} (0), consonants = {d} (1) → ❌ not balanced
+- "da" → vowels = {a} (1), consonants = {d} (1) → ✅ balanced
+- "a" → vowels = {a} (1), consonants = {} (0) → ❌ not balanced
+
+Total balanced substrings = 3
+
+Note:
+------
+- A substring is a contiguous portion of the string.
+- The goal is to count all such substrings where the number of unique vowels is equal to the number of unique consonants.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
