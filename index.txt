@@ -234,3 +234,48 @@ Note:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem — Tree Updates: Subtree & Complement Adds
+
+You are given a rooted tree with N nodes (1-indexed, root = 1). Each node i has an initial value a[i].
+You must process Q update operations of two types and then output the final value of every node.
+
+Operations:
+1) "1 X Y" — Add Y to every node in the subtree of node X.
+2) "2 X Y" — Add Y to every node NOT in the subtree of node X (i.e., to the complement of subtree(X)).
+
+Input format:
+- First line: N Q
+- Second line: a1 a2 ... aN  (initial values)
+- Next N-1 lines: edges u v (undirected; the given graph is a tree; root is 1)
+- Next Q lines: each is an operation "t X Y" where:
+    t = 1 → add Y to all nodes in subtree(X)
+    t = 2 → add Y to all nodes not in subtree(X)
+
+Output format:
+- Print N integers: the final values of nodes 1..N (in order), separated by spaces.
+
+Notes:
+- Subtree(X) includes X and all its descendants.
+- 1 ≤ X ≤ N.
+- The tree is connected and has no cycles.
+- Values and Y can be positive, zero, or negative (if not otherwise restricted).
+
+Example:
+Input
+7 2
+1 2 3 4 5 6 7
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+1 2 10
+2 3 5
+
+Output
+6 17 3 19 20 6 7
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
