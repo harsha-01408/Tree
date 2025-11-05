@@ -333,3 +333,55 @@ Total = 5.
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem — Alice vs Charlie (Path Additions on a Tree)
+
+There are M tourist locations (1…M) connected by M−1 bidirectional roads forming a tree.
+Each location i has an initial attraction score Ratings[i].
+
+Ownership:
+- Odd indices (1,3,5,…) belong to Alice.
+- Even indices (2,4,6,…) belong to Charlie.
+
+There are R visits. Each visit is described by (p, q, w).
+For a visit, add w to the attraction score of every node on the unique path from p to q (inclusive).
+
+After applying all visits, let:
+S1 = sum of final scores at all odd-indexed nodes (Alice),
+S2 = sum of final scores at all even-indexed nodes (Charlie).
+Output |S1 − S2|.
+
+Input format
+1) Integer M
+2) M integers: Ratings[1], …, Ratings[M]
+3) M−1 lines: edges u v  (1 ≤ u, v ≤ M)
+4) Integer R
+5) R lines: p q w  (1 ≤ p, q ≤ M)
+
+Output format
+A single integer: |S1 − S2|.
+
+Constraints
+1 ≤ M ≤ 100000
+1 ≤ R ≤ 1000000
+1 ≤ Ratings[i], w ≤ 10^9
+1 ≤ u, v, p, q ≤ M
+
+Example
+Input
+6
+1 2 3 4 4 2
+1 2
+1 3
+3 4
+3 5
+2 6
+3
+5 4 1
+1 6 1
+3 5 1
+
+Output
+2
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
