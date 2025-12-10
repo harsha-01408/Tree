@@ -432,3 +432,94 @@ Explanation
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+In a Salesforce organizational hierarchy, the structure is represented as a tree
+with n nodes, each corresponding to a team. A team is called a "key team" if it
+is an endpoint of any of the longest communication paths (diameters) within the
+hierarchy.
+
+The diameter of a tree is defined as the number of edges in the longest simple
+path in the tree.
+
+For all the teams in the hierarchy, determine whether they are key teams or not.
+Return a binary array of size n (1-indexed conceptually, but you can use 0-based
+in code), where the i-th value is:
+
+    1  if node i is a key team (endpoint of at least one diameter),
+    0  otherwise.
+
+-------------------------------------------------------------------------------
+Example 1:
+
+Input:
+    tree_nodes = 7
+    tree_edges = 6
+    Edges:
+        1 2
+        2 3
+        3 4
+        3 5
+        1 6
+        1 7
+
+Tree structure (1 connected to 2, 6, 7; 2 connected to 3; 3 connected to 4, 5).
+
+There are four diameters (longest paths) in this tree:
+    6–5, 6–4, 7–5, 7–4
+The endpoints of these diameters are nodes 4, 5, 6, and 7.
+
+Output:
+    [0, 0, 0, 1, 1, 1, 1]
+
+-------------------------------------------------------------------------------
+Example 2:
+
+Input:
+    tree_nodes = 2
+    tree_edges = 1
+    Edges:
+        2 1
+
+Tree structure: node 1 connected to node 2.
+The only diameter is the path 1–2, whose endpoints are 1 and 2.
+
+Output:
+    [1, 1]
+
+Both nodes are key teams.
+
+-------------------------------------------------------------------------------
+Function Description:
+
+Complete the function isKeyTeam.
+
+    vector<int> isKeyTeam(
+        int tree_nodes,
+        vector<int> tree_from,
+        vector<int> tree_to
+    );
+
+Parameters:
+    tree_nodes : the number of nodes in the tree (nodes are labeled 1..tree_nodes).
+    tree_from  : an array of size tree_edges, where tree_from[i] is one endpoint of edge i.
+    tree_to    : an array of size tree_edges, where tree_to[i] is the other endpoint of edge i.
+
+Return:
+    A vector<int> of size tree_nodes. The i-th value should be 1 if node (i+1)
+    is a key team, otherwise 0.
+
+Constraints:
+    1 <= tree_nodes <= 10^5
+    |tree_from| = |tree_to| = tree_nodes - 1
+    1 <= tree_from[i], tree_to[i] <= tree_nodes
+
+Input Format for Custom Testing:
+    The first line contains two integers: tree_nodes and tree_edges.
+    Each of the next tree_edges lines contains two integers:
+        tree_from[i] and tree_to[i]
+    describing an undirected edge between those nodes.
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
