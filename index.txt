@@ -523,3 +523,100 @@ Input Format for Custom Testing:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem Statement
+
+You are given an undirected tree with N nodes numbered 1 to N.
+You start at node 1.
+
+A set S of K nodes is given. You must:
+- Start from node 1
+- Visit every node in S at least once
+- Return back to node 1
+
+Each move consists of going to an adjacent node.
+Find the minimum number of moves required.
+
+Input Format
+- First line: N K
+- Second line: K integers (nodes in S)
+- Next N−1 lines: edges u v
+
+Output Format
+- Print the minimum number of moves.
+
+Example
+N = 8, S = {5, 6}
+Edges:
+1-2
+2-5
+2-3
+2-6
+1-4
+4-7
+7-8
+
+Output:
+6
+
+One optimal walk:
+1 → 2 → 5 → 2 → 6 → 2 → 1
+
+Constraints
+- 1 ≤ N ≤ 2×10^5
+- 0 ≤ K ≤ N
+- Tree is connected and acyclic
+- 1 ≤ u, v ≤ N
+- Time limit: 2 seconds
+- Memory limit: 256 MB
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Problem Statement
+
+You are given an undirected tree with N nodes numbered 1 to N.
+A node R is given.
+
+You may choose to start from node 1 or from node R.
+You must:
+- Start from either node 1 or node R
+- Visit every node in set S at least once
+- Return to node 1 at the end
+
+Each move consists of moving to an adjacent node.
+Find the minimum number of moves required.
+
+Input Format
+- First line: N K R
+- Second line: K integers (nodes in S)
+- Next N−1 lines: edges u v
+
+Output Format
+- Print the minimum number of moves.
+
+Example
+N = 8, K = 2, R = 1
+S = {5, 6}
+
+Edges:
+1-2
+2-5
+2-3
+2-6
+1-4
+4-7
+7-8
+
+Output:
+6
+
+Constraints
+- 1 ≤ N ≤ 2×10^5
+- 0 ≤ K ≤ N
+- Tree is connected and acyclic
+- 1 ≤ u, v ≤ N
+- Final node must be 1
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
