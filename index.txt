@@ -620,3 +620,31 @@ Constraints
 - Final node must be 1
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Optimize a directed graph representing a neural network by selecting a root node that minimizes the number of edge reversals needed.
+
+The graph has n nodes numbered from 1 to n and n-1 directed edges.
+The i-th edge connects node g_from[i] to node g_to[i].
+
+Select any node as the root, then reverse as many edges as necessary so that all edges flow away from the root.
+Find the root node choice that requires the minimum number of edge reversals, and return that minimum.
+
+Function Description:
+Complete the function getMinInversions with the following parameters:
+- int g_nodes: the number of nodes in the graph
+- int g_from[g_edges]: the starting node of the directed edges
+- int g_to[g_edges]: the ending node of the directed edges
+
+Returns:
+- int: the minimum number of edges that must be inverted
+
+Input Format for Custom Testing:
+The first line contains two space-separated integers, g_nodes and g_edges.
+The following g_edges lines contain two space-separated integers each, g_from[i] and g_to[i].
+
+Constraints:
+- 2 ≤ g_nodes ≤ 10^5
+- 1 ≤ g_from[i], g_to[i] ≤ g_nodes
+- g_from[i] ≠ g_to[i]
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
