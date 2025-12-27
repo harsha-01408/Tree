@@ -621,30 +621,30 @@ Constraints
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-Optimize a directed graph representing a neural network by selecting a root node that minimizes the number of edge reversals needed.
+You are given a directed tree with n nodes (numbered 1 to n) and exactly n-1 directed edges.
+The i-th edge goes from g_from[i] to g_to[i].
 
-The graph has n nodes numbered from 1 to n and n-1 directed edges.
-The i-th edge connects node g_from[i] to node g_to[i].
+You may choose any node as the root. After choosing the root, you want the edges to represent a rooted tree,
+meaning every edge should point away from the root (parent → child).
 
-Select any node as the root, then reverse as many edges as necessary so that all edges flow away from the root.
-Find the root node choice that requires the minimum number of edge reversals, and return that minimum.
+You are allowed to reverse (invert) the direction of any edge. Reversing one edge counts as one inversion.
 
-Function Description:
-Complete the function getMinInversions with the following parameters:
-- int g_nodes: the number of nodes in the graph
-- int g_from[g_edges]: the starting node of the directed edges
-- int g_to[g_edges]: the ending node of the directed edges
+Your task is to determine the minimum number of inversions required, over all possible choices of the root,
+to make all edges point away from the chosen root.
 
-Returns:
-- int: the minimum number of edges that must be inverted
+Function:
+int getMinInversions(int g_nodes, vector<int> g_from, vector<int> g_to)
 
-Input Format for Custom Testing:
-The first line contains two space-separated integers, g_nodes and g_edges.
-The following g_edges lines contain two space-separated integers each, g_from[i] and g_to[i].
+Input Format:
+- First line: g_nodes and g_edges (where g_edges = g_nodes - 1)
+- Next g_edges lines: g_from[i] g_to[i]
+
+Output:
+- Return the minimum number of edges that must be inverted.
 
 Constraints:
-- 2 ≤ g_nodes ≤ 10^5
-- 1 ≤ g_from[i], g_to[i] ≤ g_nodes
-- g_from[i] ≠ g_to[i]
+- 2 <= g_nodes <= 100000
+- 1 <= g_from[i], g_to[i] <= g_nodes
+- g_from[i] != g_to[i]
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
