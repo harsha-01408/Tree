@@ -648,3 +648,37 @@ Constraints:
 - g_from[i] != g_to[i]
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+C - Edge Elimination
+
+You are given a tree (a simple connected acyclic graph) on n vertices. The i-th edge of the tree is between vertices u_i and v_i, and has the value w_i written on it.
+Initially, your score is 0.
+You can repeatedly perform the following operation:
+
+- Choose an edge (u, v, w) that exists in the tree. This is an edge between u and v with a value of w.
+- Add its value w to your score.
+- Delete the edge from the tree.
+- After deletion, you will be left with two disjoint trees. You must choose to keep one of them and discard the other.
+
+This process will then repeat until there are no more edges that can be deleted in your tree.
+Find the minimum possible final score that can be attained.
+
+Input Format
+- The first line of input will contain a single integer t, denoting the number of test cases.
+- Each test case consists of multiple lines of input:
+  - The first line of each test case contains a single integer n, denoting the number of vertices in the tree.
+  - The next n-1 lines describe the edges. The i-th of these n-1 lines contains three space-separated integers u_i, v_i and w_i, denoting an edge between u_i and v_i of weight w_i.
+
+Output Format
+For each test case, output a single integer, the minimum possible final score that can be attained.
+
+Constraints
+- 1 ≤ t ≤ 3·10^4
+- 1 ≤ n ≤ 2·10^5
+- 1 ≤ u_i, v_i ≤ n
+- The input edges describe a tree on the vertex set {1,2,...,n}.
+- 1 ≤ w_i ≤ 10^9
+- The sum of n over all test cases won't exceed 2·10^5
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
