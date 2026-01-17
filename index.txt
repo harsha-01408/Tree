@@ -682,3 +682,18 @@ Constraints
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+There is a tree with N vertices, numbered 1, 2, ..., N.
+For each i (1 ≤ i ≤ N − 1), the i-th edge connects vertices x_i and y_i.
+
+Taro will paint each vertex either white or black. It is not allowed to paint
+two adjacent vertices both in black.
+
+Find the number of valid ways to paint all vertices, modulo 10^9 + 7.
+
+Constraints:
+- All values in the input are integers.
+- 1 ≤ N ≤ 10^5
+- 1 ≤ x_i, y_i ≤ N
+- The given graph is a tree.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
