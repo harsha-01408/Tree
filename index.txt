@@ -697,3 +697,28 @@ Constraints:
 - The given graph is a tree.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given a rooted weighted tree with N nodes (rooted at node 1) and Q queries.
+
+Each edge has a positive weight representing the fuel required to travel along it.
+
+For each query, you are given three integers u, v, and c.
+
+There are three cars, all starting from the same node s, and together they have c units of fuel
+(which can be distributed arbitrarily among the cars).
+
+The cars must move according to the following rules:
+- Car A must reach node u by moving only from parent to child.
+- Car B must reach node v by moving only from parent to child.
+- Car C must reach the root (node 1) by moving only from child to parent.
+
+Each car consumes fuel equal to the sum of the weights of the edges along its path.
+
+Your task is to determine, for each query, the optimal starting node s such that:
+- Both u and v are descendants of s.
+- The total fuel required, dist(s,u) + dist(s,v) + dist(s,1), is less than or equal to c.
+- Among all valid choices of s, the total fuel consumed is maximized.
+
+If no such node s exists, output 0.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
