@@ -772,3 +772,27 @@ Explanation:
 By optimally deleting two leaf nodes, the longest path in the remaining tree has length 2.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given a Binary Tree and an integer k.
+
+Find the length of the longest path in the tree such that for every pair of
+consecutive nodes (u, v) on the path:
+
+    |value(u) − value(v)| = k
+
+The path can start and end at any node in the tree.
+
+Constraints:
+- The size of the tree can be very large.
+- An optimized solution is expected (brute force will not work).
+- Recursive / Tree-DP based thinking is required.
+
+Follow-up 1:
+The longest path should form a strict arithmetic progression of numbers
+(i.e., the difference between consecutive nodes must be exactly +k or exactly -k
+and must be consistent throughout the path).
+
+Follow-up 2:
+Solve the same problem for a General Tree (N-ary Tree) instead of a Binary Tree.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
