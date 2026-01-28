@@ -874,3 +874,25 @@ w₁ | w₂ | … | wₙ₋₁
 ✅ Goal: Find the minimum possible beauty among all spanning trees of the graph, and print it for each test case.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+The country of Utopia has n cities connected by n−1 roads such that there is exactly one path between any two cities (i.e., the road network forms a tree).
+
+Due to increasing crime, the president wants to build police offices in some cities. A city is considered safe if the distance to the nearest police office is at most k.
+
+The distance between two cities is defined as the number of roads on the path connecting them.
+
+Since building police offices is expensive, the president wants to build the minimum possible number of police offices while ensuring that every city is safe.
+
+Your task is to find the minimum number of police offices that must be built.
+
+Input Format:
+- An integer n, denoting the number of cities.
+- An integer m, denoting the number of roads (m = n − 1).
+- An integer k, denoting the maximum allowed distance to a police office.
+- An integer 2, denoting the number of columns in the edges array.
+- The next m lines each contain two integers u and v, representing a road between cities u and v.
+
+Output Format:
+- Print a single integer: the minimum number of police offices required so that every city is within distance k of at least one police office.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
