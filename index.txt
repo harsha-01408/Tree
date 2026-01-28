@@ -813,3 +813,46 @@ Your task is to determine the total number of such valid triplets.
 Because the number of valid triplets can be very large, return the result modulo 10^9 + 7.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+The question is asking you to design an algorithm to choose a set of “seed” users in a social network under a budget constraint so that the total value of influenced users is maximized.
+Here’s the plain-English breakdown:
+What you’re given
+
+A social network graph
+
+   * connections: edges between users (an undirected graph).
+
+Seed costs
+
+   * costs[user]: how much it costs to pick that user as a seed.
+   * Only users listed here can be chosen as seeds.
+
+User values
+
+   * values[user]: the market value of each user.
+
+A budget
+
+   * Total cost of selected seeds must not exceed this.
+
+A depth d
+
+   * Influence spreads from seeds to their neighbors, neighbors-of-neighbors, etc., up to distance d.
+What influence means
+
+If a user is selected as a seed, they are influenced.
+All users within distance ≤ d from any seed are also influenced.
+Each user’s value is counted once, even if reached by multiple seeds.
+
+What you must compute
+Choose a subset of seed users such that:
+
+The sum of their costs ≤ budget
+The total market value of all unique influenced users is maximized
+
+Important constraint
+
+Brute force is infeasible (checking all subsets of seeds).
+You are expected to use a heuristic or approximation algorithm, not an exact exponential solution.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
