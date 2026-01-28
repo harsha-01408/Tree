@@ -856,3 +856,21 @@ Brute force is infeasible (checking all subsets of seeds).
 You are expected to use a heuristic or approximation algorithm, not an exact exponential solution.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+It’s asking you to choose which edges to keep so the graph stays connected with exactly n−1 edges, and the bitwise OR of the kept edges’ weights is as small as possible.
+More plainly:
+
+• You start with a connected, undirected weighted graph with n nodes and m edges.
+
+• You must remove exactly m−(n−1) edges, which means you will keep exactly n−1 edges.
+
+• Keeping n−1 edges and staying connected means the remaining edges form a spanning tree.
+
+• Define the “beauty” of a spanning tree as:
+
+w₁ | w₂ | … | wₙ₋₁
+(bitwise OR of its edge weights)
+
+✅ Goal: Find the minimum possible beauty among all spanning trees of the graph, and print it for each test case.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
