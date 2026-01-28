@@ -796,3 +796,20 @@ Follow-up 2:
 Solve the same problem for a General Tree (N-ary Tree) instead of a Binary Tree.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem Description
+
+You are given an undirected tree representing dependencies between products. The tree consists of
+treeNodes nodes labeled from 0 to treeNodes − 1. The edges of the tree are described by two arrays,
+treeFrom and treeTo, each of length treeNodes − 1, where treeFrom[i] and treeTo[i] denote an edge
+between those two nodes.
+
+A triplet of nodes (i, j, k) is considered valid if it satisfies the following conditions:
+1. 0 ≤ i < j < k < treeNodes
+2. There is no single simple path in the tree that contains all three nodes i, j, and k.
+
+Your task is to determine the total number of such valid triplets.
+
+Because the number of valid triplets can be very large, return the result modulo 10^9 + 7.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
