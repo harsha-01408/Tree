@@ -924,3 +924,24 @@ Your goal is to compute the minimum total number of edges you need to walk in
 order to collect all the data.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given a tree of n nodes (a connected graph with no cycles).
+
+Each node represents a database.
+Edges represent direct connections between databases.
+
+A valid configuration means:
+- Every node must be paired with exactly one of its directly connected neighbors.
+- No node may belong to more than one pair.
+
+For every node u in the tree, look at the subtree rooted at u
+(that node and all of its descendants in the rooted tree).
+
+For each such subtree, determine whether it is possible to pair
+all nodes in that subtree so that the configuration rules are satisfied.
+
+Return a string of length n:
+- Character i is '1' if the subtree rooted at node i can be fully paired.
+- Character i is '0' otherwise.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
