@@ -945,3 +945,41 @@ Return a string of length n:
 - Character i is '0' otherwise.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given a country with n cities connected by n − 1 roads.
+The roads form a tree (connected and acyclic).
+
+Each city must be assigned a prime number between 2 and 100 (inclusive).
+
+The assignment must satisfy:
+
+1) Every city is assigned a prime number in the range [2, 100].
+2) For every road connecting two cities u and v,
+   the sum of their assigned prime numbers must NOT be prime.
+
+Your task is to determine the total number of valid ways
+to assign primes to all cities.
+
+Since the result may be large, return the answer modulo 10^9 + 7.
+
+
+Function Description:
+Implement the function:
+
+    int getNumWays(int n,
+                   vector<int> edge_from,
+                   vector<int> edge_to);
+
+Parameters:
+- n: number of cities
+- edge_from[i], edge_to[i]: endpoints of the i-th road
+
+Constraints:
+- 2 ≤ n ≤ 3 × 10^4
+- 1 ≤ edge_from[i], edge_to[i] ≤ n
+- The given graph is guaranteed to be a tree
+
+Return:
+- An integer representing the number of valid prime assignments modulo 10^9 + 7.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
