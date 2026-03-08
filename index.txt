@@ -983,3 +983,31 @@ Return:
 - An integer representing the number of valid prime assignments modulo 10^9 + 7.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an integer n representing the number of employees in a company. The employees form a tree rooted at employee 1, where employee 1 is the CEO.
+
+You are also given:
+
+- an array A of size n + 1, where A[i] is the influence value of employee i
+- a list of n - 1 edges, where each edge [u, v] indicates a connection in the company hierarchy
+
+The tree is rooted at node 1.
+
+For each employee u, define:
+
+- subtree(u): all employees in the subtree of u, including u itself
+- dist(u, v): the number of edges in the unique path from u to v
+
+The impact score of employee u is defined as:
+
+Impact(u) = sum of (A[v] * dist(u, v)) for all v in subtree(u)
+
+Your task is to compute the impact score for every employee from 1 to n.
+
+Return an array ans of size n + 1 (or size n if using 0-based storage), where ans[u] is the impact score of employee u.
+
+Notes:
+- Since v = u is included in subtree(u), its contribution is A[u] * 0 = 0
+- The answer for each node only depends on nodes inside its own subtree
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
