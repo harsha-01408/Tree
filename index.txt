@@ -1053,3 +1053,36 @@ Constraints:
 - edges represents a valid tree
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an undirected tree with n nodes labeled from 1 to n, rooted at node 1.
+
+The tree is described by two arrays A and B of length n - 1, where there is an edge between A[i] and B[i].
+
+For each node u, define its jealousy value as the number of nodes v in the subtree of u such that v > u.
+
+Return the sum of jealousy values of all nodes modulo 1e9 + 7.
+
+A node x is in the subtree of u if x = u or x is a descendant of u in the tree rooted at node 1.
+
+Example 1:
+Input: A = [1,2,3], B = [4,3,2]
+Output: 4
+
+Explanation:
+Root the tree at node 1.
+- Node 1 has nodes 2, 3, and 4 in its subtree with index greater than 1, so its jealousy is 3.
+- Node 2 has node 3 in its subtree with index greater than 2, so its jealousy is 1.
+- Nodes 3 and 4 contribute 0.
+So the total is 3 + 1 = 4.
+
+Example 2:
+Input: A = [1,6,4,2,7,3], B = [5,1,5,5,4,6]
+Output: 8
+
+Constraints:
+- 2 <= n <= 1e5
+- A.length == B.length == n - 1
+- 1 <= A[i], B[i] <= n
+- The input forms a valid tree.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
